@@ -1,0 +1,25 @@
+{
+  // Policy version — "2012-10-17" is the latest stable version
+  "Version": "2012-10-17",
+
+  // A list of permission statements (you can have multiple)
+  "Statement": [
+    {
+      // Optional ID for the statement (helps identify the rule)
+      "Sid": "PublicRead",
+
+      // "Allow" means this rule grants access (as opposed to "Deny")
+      "Effect": "Allow",
+
+      // Who this permission applies to — "*" means everyone (public access)
+      "Principal": "*",
+
+      // The action allowed — here, it's reading objects from the bucket
+      "Action": "s3:GetObject",
+
+      // The resource this applies to — all files/objects in the specified S3 bucket
+      "Resource": "arn:aws:s3:::aditya-multicloud-frontend/*"
+      // This ARN means: "all objects inside the 'aditya-multicloud-frontend' bucket"
+    }
+  ]
+}

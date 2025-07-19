@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>portfolio</title>
+</head>
+<body>
+  <h3>Hello</h3>
+  <h4>Welcome to the page</h4>
+  <p>Here you can check out about, my education, my experience, and projects</p>
+  <br />
+  <a href="/education.html">Education</a>
+  <hr />
+  <a href="/Experience.html">Experience</a>
+  <hr />
+  <a href="projects.html">Projects</a>
+
+  <hr />
+  <h4>Cloud Run API Demo</h4>
+  <button onclick="callApi()">Call GCP API</button>
+  <p id="api-response" style="font-weight: bold; color: green;"></p>
+
+  <script>
+    async function callApi() {
+      try {
+        const response = await fetch("https://gcp-apiadi-876543542812.asia-south1.run.app/api");
+        const data = await response.json();
+        document.getElementById("api-response").innerText = data.message;
+      } catch (error) {
+        document.getElementById("api-response").innerText = "Error fetching API";
+      }
+    }
+  </script>
+</body>
+</html>

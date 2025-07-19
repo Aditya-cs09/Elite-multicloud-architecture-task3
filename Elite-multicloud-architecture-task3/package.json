@@ -1,0 +1,22 @@
+{
+  // The name of your project
+  "name": "gcp-api",
+
+  // The version of your application
+  "version": "1.0.0",
+
+  // The entry point of your application (the main JS file)
+  "main": "index.js",
+
+  // Scripts are custom commands you can run using `npm run <script-name>`
+  "scripts": {
+    // This script runs `node index.js` when you execute `npm start`
+    "start": "node index.js"
+  },
+
+  // Dependencies required for this project to run
+  "dependencies": {
+    // Express is a lightweight web framework for Node.js
+    "express": "^4.18.2"
+  }
+}

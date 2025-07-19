@@ -1,0 +1,16 @@
+# Use the official Node.js 18 image as the base image
+FROM node:18
+
+# Set the working directory inside the container to /app
+# All future commands will run relative to this directory
+WORKDIR /app
+
+# Copy all files from your local project directory into the container's /app directory
+COPY . .
+
+# Install all dependencies listed in package.json
+RUN npm install
+
+# Define the command to run your app when the container starts
+# This runs "npm start", which will internally run "node index.js" as defined in package.json
+CMD ["npm", "start"]
